@@ -96,14 +96,11 @@ def magic(y, x, d, turn):
     # 중앙 셀이 숲 안에 있는지 확인
     if not inRange(y, x):
         # 해당 골렘만 스킵하고 점수를 추가하지 않음
-        print(f"Golem {turn} moved out of the forest.")
         resetMap()  # 격자 초기화
         return
 
     # 중앙 셀이 숲 안에 있고, 주변 셀이 비어있는지 다시 확인
     if not canGo(y, x):
-        # 해당 골렘만 스킵하고 점수를 추가하지 않음
-        print(f"Golem {turn} cannot settle at ({y}, {x}).")
         resetMap()  # 격자 초기화
         return
 
